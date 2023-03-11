@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifood 2</title>
+</head>
+<body>
+    <h1>Bem vindo ao Ifood 2!</h1>
+    <div id = "oi"></div>
+    <div id = "div"></div>
+    <div id = "confirmar"></div>
+   
+    <script>
+    //-------------------------Variáveis-------------------
+    let saudacao = "Olá, bem vindo ao Ifood 2!"
+    let div = "-----------------------------------------------------------------------"
+    let lanche = Number(prompt("Digite o número do lanche que deseja saber a descrição, por favor: \n\n1 - X-Burguer \n\n2 - X-Salada\n\n3 - Lanchinho"))
+    let desc = ""
+    let confirmar = ""
+    //-----------------------------------------------------
+
+    
+
+    switch (lanche) {
+        case 1:
+            desc = Number(prompt("1 - X-Burguer (Hambúrguer, Alface e Tomate) ------------------ R$13,99 \n Deseja esse lanche? \n 1 \t Sim \n 2 \t Não"))
+            if(desc === 1){
+                confirmar = "Obrigado por escolher o X-Burguer!"
+            }else if(desc === 2){
+                confirmar = "Obrigado pelo seu tempo! :D"
+            }else{
+                confirmar = "Favor escolher número válido"
+            }
+            break;
+        case 2:
+            desc = Number(prompt("2 - X-Salada (Bife de Frango, Cebola e Molho Especial) -------- R$12,99 \n Deseja esse lanche? \n 1 \t Sim \n 2 \t Não"))
+            if(desc === 1){
+                confirmar = "Obrigado por escolher o X-Salada!"
+            }else if(desc === 2){
+                confirmar = "Obrigado pelo seu tempo! :D"
+            }else{
+                confirmar = "Favor escolher número válido"
+            }
+
+            break;
+        case 3:
+            desc = Number(prompt("3 - Lanchinho (Pão Integral, Queijo Prato e Alface Americano) - R$14,99 \n Deseja esse lanche? \n 1 \t Sim \n 2 \t Não"))
+            if(desc === 1){
+                confirmar = "Obrigado por escolher o Lanchinho!"
+            }else if(desc === 2){
+                confirmar = "Obrigado pelo seu tempo! :D"
+            }else{
+                confirmar = "Favor escolher número válido"
+            }
+            break;
+    
+        default:
+            confirmar = "Favor inserir número válido"
+            break;
+    }
+
+    document.getElementById("oi").innerHTML = saudacao
+    document.getElementById("div").innerHTML = div
+    document.getElementById("confirmar").innerHTML = confirmar
+
+    </script>
+</body>
+</html>
